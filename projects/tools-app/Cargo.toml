@@ -1,5 +1,5 @@
 [package]
-name = "tools-app-final"
+name = "tools-app"
 version = "0.1.0"
 edition = "2021"
 
@@ -25,6 +25,7 @@ sqlx = { version = "0.8.2", features = [
 uuid = { version = "1.5.0", optional = true, features = ["v4"] }
 whoami = { version = "1.4.1", features = ["default"] }
 
+
 [features]
 csr = ["leptos/csr", "leptos_meta/csr", "leptos_router/csr"]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]
@@ -38,17 +39,6 @@ ssr = [
   "leptos_meta/ssr",
   "leptos_router/ssr",
 ]
-
-# enable this for a release or debug build, it will break the rust-analyzer
-# [workspace]
-
-# command for a release build
-# cargo leptos build --release
-# cargo leptos build --precompress --release
-
-# command for a debug build
-# cargo leptos build --wasm-debug
-
 
 # Defines a size-optimized profile for the WASM bundle in release mode
 [profile.wasm-release]
